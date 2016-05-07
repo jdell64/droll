@@ -9,7 +9,6 @@ export module DiceRoller {
   // Define a "class" to represent the results of the roll
   export class DrollResult {
     constructor(public rolls = [], public modifier = 0, public total = 0){};
-
     toString = function() {
       if (this.rolls.length === 1 && this.modifier === 0) {
         return this.rolls[0] + '';
