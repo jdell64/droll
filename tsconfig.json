@@ -7,13 +7,13 @@
         "jsx": "react",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "declaration": false,
-        "noImplicitAny": false,
-        "noImplicitUseStrict": false,
+        "declaration": true,
+        "noImplicitAny": true,
         "removeComments": true,
         "noLib": false,
         "preserveConstEnums": true,
-        "suppressImplicitAnyIndexErrors": true
+        "suppressImplicitAnyIndexErrors": true,
+        "outDir": "dist"
     },
     "exclude": [
         "node_modules",
@@ -24,5 +24,9 @@
     "buildOnSave": false,
     "atom": {
         "rewriteTsconfig": false
-    }
+    },
+    "files": [
+      "tsroll.ts",
+      "test/tsroll.test.ts"
+    ]
 }

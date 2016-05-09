@@ -8,7 +8,7 @@ export module DiceRoller {
 
   // Define a "class" to represent the results of the roll
   export class DrollResult {
-    constructor(public rolls = [], public modifier = 0, public total = 0){};
+    constructor(public rolls : number[], public modifier = 0, public total = 0){};
     toString = function() {
       if (this.rolls.length === 1 && this.modifier === 0) {
         return this.rolls[0] + '';
@@ -35,7 +35,7 @@ export module DiceRoller {
   }
 
   export class Droll {
-    parse = function(formula) {
+    parse = function(formula: String) {
       var pieces: any;
       var result = new DrollFormula(0, 0, 0);
       pieces = formula.match(/^([1-9]\d*)?d([1-9]\d*)([+-]\d+)?$/i);
@@ -51,9 +51,9 @@ export module DiceRoller {
       return result;
     };
 
-    roll = function(formula) {
-      var pieces = null;
-      var result = new DrollResult();
+    roll = function(formula: String) {
+      var pieces: any;
+      var result =  new DrollResult([],0,0);
 
       var pieces = this.parse(formula);
       if (!pieces) {
@@ -78,7 +78,7 @@ export module DiceRoller {
      * Test the validity of the formula.
      * Returns true on success or false on failure.
      */
-    validate = function(formula) {
+    validate = function(formula: String) {
       return (this.parse(formula)) ? true : false;
     };
 

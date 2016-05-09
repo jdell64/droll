@@ -1,0 +1,32 @@
+{
+  "name": "tsroll",
+  "version": "0.0.1",
+  "description": "Publishing a TypeScript npm package",
+  "main": "dist/tsroll.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha dist/test/tsroll.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdell64/tsroll.git"
+  },
+  "typescript": {
+    "definition": "tsroll.d.ts"
+  },
+  "author": "Jeff Tindell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdell64/tsroll/issues"
+  },
+  "homepage": "https://github.com/jdell64/tsroll#readme",
+  "devDependencies": {
+    "should": "^8.3.1",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+
+  }
+}
