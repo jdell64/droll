@@ -1,1 +1,7 @@
-test/
+node_modules/
+*.d.ts
+*.log
+*.tgz
+
+!tsroll.d.ts
+!tsroll.ref.d.ts
